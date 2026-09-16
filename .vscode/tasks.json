@@ -1,0 +1,118 @@
+{
+    "version": "2.0.0",
+    "options": {
+        "env": {
+            "PATH": "${env:PATH}",
+            "WORKSPACE": "${workspaceFolder}"
+        }
+    },
+    "tasks": [
+        {
+            "label": "Lora Build Auto Ping",
+            "type": "process",
+            "command": "C:\\Users\\MichaelDesrosiers\\zephyrproject\\zephyr\\lora-link\\scripts\\build-auto.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "args": [
+                "lora_e5_mini",
+                "ROLE_PING"
+            ],
+        },
+        {
+            "label": "Lora Build Auto Pong",
+            "type": "process",
+            "command": "C:\\Users\\MichaelDesrosiers\\zephyrproject\\zephyr\\lora-link\\scripts\\build-auto.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "args": [
+                "lora_e5_mini",
+                "ROLE_PONG"
+            ],
+        },
+        {
+            "label": "Lora Build Pristine",
+            "type": "process",
+            "command": "C:\\Users\\MichaelDesrosiers\\zephyrproject\\zephyr\\lora-link\\scripts\\build-pristine.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "args": [
+                "lora_e5_mini",
+            ],
+        },
+        {
+            "label": "Flash JLink",
+            "type": "process",
+            "command": "C:\\Users\\MichaelDesrosiers\\zephyrproject\\zephyr\\lora-link\\scripts\\flash-jlink.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "args": [
+                "jlink"
+            ]
+        },
+        {
+            "label": "Flash STM32Cube",
+            "type": "process",
+            "command": "C:\\Users\\MichaelDesrosiers\\zephyrproject\\zephyr\\lora-link\\scripts\\flash-jlink.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "args": [
+                "stm32cubeprogrammer"
+            ]
+        },
+        {
+            "label": "Flash PyOCD",
+            "type": "process",
+            "command": "C:\\Users\\MichaelDesrosiers\\zephyrproject\\zephyr\\lora-link\\scripts\\flash-jlink.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "args": [
+                "pyocd"
+            ]
+        },
+        {
+            "label": "Monitor RTT",
+            "type": "process",
+            "command": "C:\\Users\\MichaelDesrosiers\\zephyrproject\\zephyr\\lora-link\\scripts\\monitor.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "args": [
+                "pyocd"
+            ]
+        },
+        {
+            "label": "Show RAM report",
+            "type": "process",
+            "command": "C:\\Users\\MichaelDesrosiers\\zephyrproject\\zephyr\\lora-link\\scripts\\ram_report.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Resolve PC addr",
+            "type": "process",
+            "command": "C:\\Users\\MichaelDesrosiers\\zephyrproject\\zephyr\\lora-link\\scripts\\resolve_addr.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "args": [
+                "nucleo_l476rg",
+            ],
+        },
+    ]
+}

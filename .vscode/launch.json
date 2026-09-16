@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Zephyr Debug (J-Link)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/zephyr/zephyr.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "device": "STM32F411CE",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            // Path to your Zephyr SDK GDB
+            "gdbPath": "C:/Users/MichaelDesrosiers/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb.exe",
+            // Path to your J-Link Server (Fixes the ENOENT error)
+            "serverpath": "C:/Program Files/SEGGER/JLink_V888/JLinkGDBServerCL.exe",
+            "rtos": "Zephyr",
+            "serverArgs": [
+                "-rtos",
+                "C:/Program Files/SEGGER/JLink_V888/GDBServer/RTOSPlugin_Zephyr.dll"
+            ],
+            "showDevDebugOutput": "raw"
+        }
+    ]
+}
