@@ -1,7 +1,8 @@
 &lpuart1 {
 	status = "okay";
 	current-speed = <115200>;
-	pinctrl-0 = <&lpuart1_tx_pc1 &lpuart1_rx_pc0>;
+	// pinctrl-0 = <&lpuart1_tx_pc1 &lpuart1_rx_pc0>;
+	pinctrl-0 = <&lpuart1_tx_pc1>;
 	pinctrl-names = "default";
 };
 
